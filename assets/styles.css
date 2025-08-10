@@ -1,0 +1,90 @@
+
+:root{
+  --bg:#0b1020;
+  --card: rgba(255,255,255,0.04);
+  --accent:#00d4ff;
+  --muted:#bfc7d6;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,#071022 0%, #041022 100%);font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color: #e6eef6;}
+.container{max-width:1100px;margin:110px auto 60px;padding:20px;}
+.header{position:fixed;top:0;left:0;right:0;height:70px;display:flex;align-items:center;justify-content:space-between;padding:12px 28px;background:linear-gradient(180deg, rgba(2,6,23,0.6), rgba(2,6,23,0.25));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:100;}
+.logo{display:flex;align-items:center;gap:12px;color:var(--accent);font-weight:700;}
+.logo .icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#003a50,#00d4ff22);box-shadow:0 6px 18px rgba(2,20,30,0.6);}
+.header .actions{display:flex;gap:12px;align-items:center;}
+.btn{padding:8px 12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#00a7ff);color:#021;box-shadow:0 8px 30px rgba(0,212,255,0.08)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill, minmax(300px,1fr));gap:22px;margin-top:18px}
+.card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);transition:transform .28s cubic-bezier(.2,.9,.3,1), box-shadow .28s;display:flex;flex-direction:column;min-height:220px}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 50px rgba(2,20,30,0.6);}
+.thumb{height:160px;background-size:cover;background-position:center;}
+.card-body{padding:16px;display:flex;flex-direction:column;flex:1}
+.card h3{margin:0 0 8px 0;font-size:1.05rem;color:#fff}
+.card p{margin:0;color:var(--muted);flex:1}
+.card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.meta .read{font-weight:700;color:var(--accent);text-decoration:none;padding:8px 10px;border-radius:8px;background:linear-gradient(90deg, rgba(0,212,255,0.08), rgba(0,167,255,0.04));}
+.article{max-width:900px;margin:0 auto;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 40px rgba(2,20,30,0.6)}
+.article h1{margin-top:0}
+.related{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.related a{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.03);text-decoration:none;color:var(--muted);font-weight:600;border:1px solid rgba(255,255,255,0.02)}
+footer{padding:40px 20px;text-align:center;color:#7f98b0;font-size:0.95rem}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:18px}
+.hero .intro{max-width:640px}
+.hero h2{margin:0 0 8px 0;font-size:1.6rem;color:#fff}
+.search{margin-top:12px;display:flex;gap:8px}
+.search input{flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.02);color:#fff}
+@media(max-width:800px){.hero{flex-direction:column;align-items:flex-start}.container{margin-top:90px;padding:12px}.grid{grid-template-columns:1fr} .header{padding:8px 14px}}
+
+
+/* Улучшенная типографика */
+body {
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  line-height: 1.3;
+}
+
+a {
+  color: #4da3ff; /* более светлый голубой */
+  text-decoration: none; /* убираем подчёркивание, если нужно */
+}
+
+a:hover {
+  color: #80c1ff; /* ещё светлее при наведении */
+}
+
+.article p {
+  margin-bottom: 1em;
+  font-size: 1.05em;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 17px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 12px;
+  }
+  .header .actions {
+    margin-top: 8px;
+    gap: 8px;
+  }
+  .card {
+    min-height: auto;
+  }
+  .card-body {
+    padding: 14px;
+  }
+  .hero {
+    flex-direction: column;
+  }
+  .hero .intro {
+    max-width: 100%;
+  }
+}
